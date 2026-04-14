@@ -151,12 +151,20 @@ Where `<TYPE>` is one of: `PDF`, `Word`, `EPUB`, `HTML`, `Markdown`, `URL`, `Tex
 rm -f /tmp/sideread_input.md /tmp/sideread_body.html
 ```
 
-### 7. Report to user
+### 7. Open the output in the browser
+
+```bash
+open "<absolute_output_path>"
+```
+
+This opens the file in the system default browser (Chrome on most macOS setups). Run this immediately after cleanup — do not wait for user input.
+
+### 8. Report to user
 
 Tell the user:
 - The output file path (as a clickable path)
 - How many block elements were processed (printed by build.py)
-- How to use it: open in Chrome → select language from the dropdown in the header to translate the right column; the left column always stays in the original language
+- That the file has been opened in the browser — select a language from the dropdown in the header to translate the right column; the left column always stays in the original language
 - Reminder that an internet connection is needed for the Google Translate widget
 
 ---
